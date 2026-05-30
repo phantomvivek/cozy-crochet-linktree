@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozy Crochet by JD</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #fffcf1;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(180, 210, 160, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(220, 180, 160, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 60% 10%, rgba(200, 190, 230, 0.12) 0%, transparent 40%);
+      font-family: 'Lato', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(180, 160, 140, 0.2);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 8px 40px rgba(120, 90, 70, 0.08);
+    }
+
+    .logo-wrap {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d4e8c2 0%, #f5d6c0 100%);
+      margin: 0 auto 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 16px rgba(120, 90, 70, 0.12);
+      font-size: 2.5rem;
+      overflow: hidden;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #3d2c1e;
+      letter-spacing: 0.01em;
+      margin-bottom: 0.3rem;
+    }
+
+    .tagline {
+      font-size: 0.82rem;
+      color: #9a7e6a;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .location {
+      font-size: 0.8rem;
+      color: #b8a090;
+      margin-bottom: 1.4rem;
+      font-style: italic;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c8a882, transparent);
+      margin: 0 auto 1.4rem;
+    }
+
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #c0a080;
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1.1rem;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(120, 90, 70, 0.13);
+    }
+
+    .link-btn .icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+
+    .link-btn .label {
+      flex: 1;
+      text-align: left;
+    }
+
+    .link-btn .sub {
+      font-size: 0.72rem;
+      opacity: 0.65;
+      display: block;
+      margin-top: 1px;
+    }
+
+    .link-btn .arrow {
+      font-size: 0.75rem;
+      opacity: 0.4;
+    }
+
+    .btn-etsy {
+      background: rgba(241, 100, 30, 0.07);
+      border-color: rgba(241, 100, 30, 0.2);
+      color: #8a3a10;
+    }
+
+    .btn-etsy .icon img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .btn-shopify {
+      background: rgba(78, 168, 96, 0.07);
+      border-color: rgba(78, 168, 96, 0.2);
+      color: #245c30;
+    }
+
+    .btn-shopify .icon img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .btn-instagram {
+      background: rgba(180, 100, 160, 0.07);
+      border-color: rgba(180, 100, 160, 0.2);
+      color: #6b2d5a;
+    }
+
+    .btn-instagram .icon img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .btn-tiktok {
+      background: rgba(40, 40, 40, 0.06);
+      border-color: rgba(40, 40, 40, 0.12);
+      color: #2a2a2a;
+    }
+
+    .btn-tiktok .icon img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .footer {
+      font-size: 0.72rem;
+      color: #c8b8a8;
+      margin-top: 1.5rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <!-- To use a logo image, replace the emoji below with: <img src="logo.png" alt="Cozy Crochet by JD logo"> -->
+    <div class="logo-wrap"><img src="assets/cozy-icon.svg" alt="Cozy Crochet by JD logo"></div>
+    <p class="tagline">handmade with love</p>
+    <h1>Cozy Crochet by JD</h1>
+    <p class="location">London, UK</p>
+    <div class="divider"></div>
+
+    <!-- <p class="section-label">Shop</p> -->
+    <div class="links">
+      <a class="link-btn btn-shopify" href="https://cozy-crochet-by-jd.myshopify.com/" target="_blank">
+        <div class="icon"><img src="assets/shopify.png" alt="Shopify icon"></div>
+        <div class="label">
+          Shopify Store
+          <span class="sub">cozy-crochet-by-jd.myshopify.com</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="link-btn btn-etsy" href="https://www.etsy.com/shop/cozycrochetbyjd/?etsrc=sdt" target="_blank">
+        <div class="icon"><img src="assets/etsy.png" alt="Etsy icon"></div>
+        <div class="label">
+          Etsy Store
+          <span class="sub">etsy.com/shop/CozyCrochetbyJD</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="link-btn btn-instagram" href="https://www.instagram.com/cozycrochetbyjd" target="_blank">
+        <div class="icon"><img src="assets/instagram.png" alt="Instagram icon"></div>
+        <div class="label">
+          Instagram
+          <span class="sub">@cozycrochetbyjd</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="link-btn btn-tiktok" href="https://www.tiktok.com/@cozycrochetbyjd" target="_blank">
+        <div class="icon"><img src="assets/tiktok.png" alt="TikTok icon"></div>
+        <div class="label">
+          TikTok
+          <span class="sub">@cozycrochetbyjd</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <p class="footer">Thoughtful gifts and cozy little keepsakes with a soft handmade touch</p>
+  </div>
+</body>
+
+</html>
