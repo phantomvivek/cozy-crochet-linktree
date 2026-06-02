@@ -18,10 +18,7 @@
     body {
       min-height: 100vh;
       background-color: #fffcf1;
-      background-image:
-        radial-gradient(circle at 20% 20%, rgba(180, 210, 160, 0.18) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(220, 180, 160, 0.18) 0%, transparent 50%),
-        radial-gradient(circle at 60% 10%, rgba(200, 190, 230, 0.12) 0%, transparent 40%);
+      background: rgba(255, 255, 255, 0.75);
       font-family: 'Lato', sans-serif;
       display: flex;
       align-items: flex-start;
@@ -30,15 +27,15 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.75);
+      /* background: rgba(255, 255, 255, 0.75);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(180, 160, 140, 0.2);
-      border-radius: 24px;
-      padding: 2.5rem 2rem;
+      box-shadow: 0 8px 40px rgba(120, 90, 70, 0.08);
+      border-radius: 24px; */
+      padding: 1.5rem 2rem;
       width: 100%;
       max-width: 420px;
       text-align: center;
-      box-shadow: 0 8px 40px rgba(120, 90, 70, 0.08);
     }
 
     .logo-wrap {
@@ -197,6 +194,30 @@
       border-radius: 8px;
     }
 
+    .btn-pinterest {
+      background: rgba(210, 100, 160, 0.06);
+      border-color: rgba(210, 100, 160, 0.12);
+      color: #2a2a2a;
+    }
+
+    .btn-pinterest .icon img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .btn-facebook {
+      background: rgba(100, 100, 160, 0.06);
+      border-color: rgba(100, 100, 160, 0.12);
+      color: #2a2a2a;
+    }
+
+    .btn-facebook .icon img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
     .footer {
       font-size: 0.72rem;
       color: #6e6e6e;
@@ -214,7 +235,7 @@
     <p class="tagline">handmade with love</p>
     <h1>Cozy Crochet by JD</h1>
     <p class="location">London, UK</p>
-    <div class="divider"></div>
+    <!-- <div class="divider"></div> -->
 
     <div class="links">
       <a class="link-btn btn-shopify" href="https://cozy-crochet-by-jd.myshopify.com/" target="_blank">
@@ -246,6 +267,22 @@
         <div class="label">
           TikTok
           <span class="sub">@cozycrochetbyjd</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="link-btn btn-pinterest" href="https://in.pinterest.com/cozycrochetbyjd/" target="_blank">
+        <div class="icon"><img src="assets/pinterest.png" alt="Pinterest icon"></div>
+        <div class="label">
+          Pinterest
+          <span class="sub">cozycrochetbyjd</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="link-btn btn-facebook" href="https://www.facebook.com/profile.php?id=61590358989383" target="_blank">
+        <div class="icon"><img src="assets/facebook.png" alt="Facebook icon"></div>
+        <div class="label">
+          Facebook
+          <span class="sub">Cozy Crochet by JD</span>
         </div>
         <span class="arrow">→</span>
       </a>
